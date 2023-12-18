@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="icon" href="assets/img/sun.png" type="image/x-icon">
+
+        <title>Its Zryyy</title>
+        <style>
+            #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        </style>
+    </head>
+    <body>
+        <div id="loading-screen">
+            <div class="loader"></div>
+            <p>Tunggu ya kakk!! Masih loading...</p>
+        </div>
+
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo">Zryy</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About her</a></li>
+                        <li class="nav__item"><a href="#album" class="nav__link">Album</a></li>
+                        <li class="nav__item"><a href="#video" class="nav__link">Video</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">For you</a></li>
+
+                        <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                        <a href="index.html" style="margin-left: 10px;"><li><i class='bx bx-log-out'></i></li></a>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--========== HOME ==========-->
+            <section class="home" id="home">
+                <div class="home__container bd-container bd-grid">
+                    <div class="home__data">
+                        <h1 class="home__title">Welcome</h1>
+                        <h2 class="home__subtitle">Just a girl with a heart <br> full of sunshine.</h2>
+                        <a href="#about" class="button">Let's See...</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!--========== ABOUT ==========-->
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <img src="assets/img/about.jpg" alt="" class="about__img">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">About her</span>
+                        <h2 class="section-title about__initial">Ini Yupi</h2>
+                        <p class="about__description">Namanya Yuni, Wajahnya sangat cantik disertai dengan senyum manisnya membuat hati siapa pun yang berada di sekitarnya terasa hangat.
+                            Tidak hanya cantik, Yuni juga lucu yang mampu membuat setiap momen menjadi lebih cerah. Setiap kali dia tertawa, suaranya yang lucu menjadi daya tarik yang membuat suasana semakin menyenangkan.
+                            Namun, di balik keimutan itu, Yuni kadang sulit diatur, dan dia punya kecenderungan membuat hal-hal yang seharusnya sederhana menjadi rumit.
+                            Meskipun begitu, Dia adalah seseorang yang tak tergantikan dalam hidupku.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== MENU ==========-->
+            <section class="menu section bd-container" id="album">
+                <span class="section-subtitle">Album</span>
+                <h2 class="section-title">Ini Yupi</h2>
+
+                <div class="menu__container bd-grid">
+                    <div class="menu__content">
+                        <img src="assets/img/1.jpg" alt="" class="menu__img">
+                    </div>
+
+                    <div class="menu__content">
+                        <img src="assets/img/2.jpg" alt="" class="menu__img">
+                    </div>
+                    
+                    <div class="menu__content">
+                        <img src="assets/img/3.jpg" alt="" class="menu__img">
+                    </div>
+
+                    <div class="menu__content">
+                        <img src="assets/img/4.jpg" alt="" class="menu__img">
+                    </div>
+
+                    <div class="menu__content">
+                        <img src="assets/img/6.jpg" alt="" class="menu__img">
+                    </div>
+
+                    <div class="menu__content">
+                        <img src="assets/img/7.jpg" alt="" class="menu__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== VIDEO ====================-->
+            <section class="video section bd-container" id="video">
+                <div class="video__container container">
+                    <div class="video__content">
+                        <video id="video-file">
+                            <source src="assets/video/video.mp4" type="video/mp4">
+                        </video>
+
+                        <button class="button2 button2--flex video__button" id="video-button">
+                            <i class="bx bx-play video__button-icon" id="video-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== CONTACT US ==========-->
+            <section class="contact section bd-container" id="contact">
+                <div class="contact__container bd-grid">
+                    <div class="contact__data">
+                        <span class="section-subtitle contact__initial">For You</span>
+                        <h2 class="section-title contact__initial">Just something</h2>
+                        <p class="contact__description">Aku ada sesuatu buat kak yupii tapi ga terlalu penting sih, jadi terserah mau liat atau gaa</p>
+                    </div>
+
+                    <div class="contact__button">
+                        <a href="card.html" class="button">Click Ini Kak!</a>
+                        <a href="text.html" class="button">Click Ini Juga Ya!</a>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            <p class="footer__copy">&#169; 2023 ZryCode. All right reserved</p>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="assets/js/main.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Hide the loading screen when the content is fully loaded
+                window.addEventListener("load", function () {
+                    var loadingScreen = document.getElementById("loading-screen");
+                    loadingScreen.style.display = "none";
+                });
+            });
+        </script>
+    </body>
+</html>

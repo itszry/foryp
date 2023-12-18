@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="icon" href="assets/img/sun.png" type="image/x-icon">
+    <title>Halo Yupii</title>
+    <style>
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Tunggu ya kakk!! Masih loading...</p>
+    </div>
+    <div class="snow-container">
+        <div class="snowflake" style="left: 10%; animation-duration: 10s;"></div>
+        <div class="snowflake" style="left: 20%; animation-duration: 8s;"></div>
+    </div>
+
+    <div class="card">
+        <div class="imgBox">
+            <div class="bark"></div>
+            <img src="assets/img/img.jpg">
+        </div>
+        <div class="details">
+            <h4 class="color">haloo yupii cantik</h4>
+            <p>Let's see...</p>
+            <p>I just wanna to say</p>
+            <p>kalo aku menyukaimu,</p>
+            <p>senyum itu, mata itu, suara itu</p>
+            <p>aku menyukai semua tentangmu.</p>
+            <p>selama aku masih hidup, kamu</p>
+            <p>akan selalu punya seseorang</p>
+            <p>yg bangga padamu dalam segala hal.</p>
+            <p>jadi jgn pernah takut untuk</p>
+            <p>membicarakan masalahmu,</p>
+            <p>aku disini akan selalu</p>
+            <p>mendengarkanmu.</p>
+
+            <p class="text-right">Love youu</p>
+            <p class="text-right">Surya</p>
+        </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; position: absolute; bottom: 20px; width: 100%;">
+        <button onclick="showConfirm()" id="myButton">Lanjut?</button>
+    </div>
+
+    <div id="backToIndexContainer">
+        <button id="backToIndexButton" onclick="goToIndex()">
+            <i class="bx bx-arrow-back"></i>
+        </button>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="confirm-container" id="confirmContainer">
+        <div class="confirm-content">
+            <p>Mau liat bunga kak?</p>
+        </div>
+        <button class="confirm-button" onclick="redirectToFlower()">Iya</button>
+        <button class="confirm-button" onclick="hideConfirm()">Ngga</button>
+    </div>
+    <audio src="assets/song/song.mp3" autoplay loop style="z-index: 0;"></audio>
+    <script src="assets/js/card.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Hide the loading screen when the content is fully loaded
+            window.addEventListener("load", function () {
+                var loadingScreen = document.getElementById("loading-screen");
+                loadingScreen.style.display = "none";
+            });
+        });
+    </script>
+</body>
+
+</html>
